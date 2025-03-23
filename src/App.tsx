@@ -33,7 +33,7 @@ export const App: React.FC = () => {
       .finally(() => setUserLoad(false));
   };
 
-  const handleSelectPost = (todo: { id: number; title: string }) => {
+  const handleSelectPost = (todo: {  id: number; title: string, userId: number}) => {
     setSelectedTodoId(prevId => (prevId === todo.id ? null : todo.id));
     setSelectedTodo(todo);
     handleShowUser(todo.userId);
